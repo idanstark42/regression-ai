@@ -12,7 +12,7 @@ class Function:
   def random_points(self, n=100):
     x = np.random.rand(n)
     y = np.array([self.eval(xi) for xi in x])
-    points = np.array([x, y]).T
+    points = np.array([x, y]).T.flatten()
     return points
   
   def __str__(self) -> str:
